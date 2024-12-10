@@ -3,14 +3,14 @@ package main
 import (
 	"log"
 	"net/http"
-	"taskmanager/internal/infrastructure/delivery/rest"
-	"taskmanager/internal/infrastructure/repository"
-	"taskmanager/internal/usecase"
+	"taskmanager-flat/internal/domain"
+	"taskmanager-flat/internal/infrastructure/delivery/rest"
+	"taskmanager-flat/internal/infrastructure/repository"
 )
 
 func main() {
 	store := repository.NewMemoryStore()
-	service := usecase.NewTaskService(store)
+	service := domain.NewTaskService(store)
 	handler := rest.NewRestHandler(service)
 
 	http.HandleFunc("/tasks/create", handler.CreateTask)

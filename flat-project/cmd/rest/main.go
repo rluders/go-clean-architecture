@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"taskmanager/internal/task"
+	"taskmanager-elaborated/internal/task"
 )
 
 func main() {

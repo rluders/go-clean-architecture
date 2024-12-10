@@ -1,7 +1,7 @@
 package main
 
 import (
-	"taskmanager/internal/task"
+	"taskmanager-elaborated/internal/task"
 )
 
 func main() {

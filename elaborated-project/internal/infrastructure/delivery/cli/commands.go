@@ -5,16 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"taskmanager/internal/domain"
-	"taskmanager/internal/usecase"
+	"taskmanager-flat/internal/domain"
 	"time"
 )
 
 type CLIHandler struct {
-	service *usecase.TaskService
+	service *domain.TaskService
 }
 
-func NewCLIHandler(service *usecase.TaskService) *CLIHandler {
+func NewCLIHandler(service *domain.TaskService) *CLIHandler {
 	return &CLIHandler{service: service}
 }
 

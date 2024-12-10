@@ -1,23 +1,21 @@
-package usecase
-
-import "taskmanager/internal/domain"
+package domain
 
 type TaskService struct {
-	repo domain.TaskRepositorier
+	repo TaskRepositorier
 }
 
-func NewTaskService(repo domain.TaskRepositorier) *TaskService {
+func NewTaskService(repo TaskRepositorier) *TaskService {
 	return &TaskService{repo: repo}
 }
 
-func (s *TaskService) CreateTask(task domain.Task) error {
+func (s *TaskService) CreateTask(task Task) error {
 	if err := task.Validate(); err != nil {
 		return err
 	}
 	return s.repo.Save(task)
 }
 
-func (s *TaskService) GetTasks() ([]domain.Task, error) {
+func (s *TaskService) GetTasks() ([]Task, error) {
 	return s.repo.GetAll()
 }
 

@@ -1,3 +1,3 @@
-module taskmanager
+module taskmanager-flat
 
 go 1.23

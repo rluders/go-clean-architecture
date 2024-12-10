@@ -1,14 +1,14 @@
 package main
 
 import (
-	"taskmanager/internal/infrastructure/delivery/cli"
-	"taskmanager/internal/infrastructure/repository"
-	"taskmanager/internal/usecase"
+	"taskmanager-flat/internal/domain"
+	"taskmanager-flat/internal/infrastructure/delivery/cli"
+	"taskmanager-flat/internal/infrastructure/repository"
 )
 
 func main() {
 	store := repository.NewMemoryStore()
-	service := usecase.NewTaskService(store)
+	service := domain.NewTaskService(store)
 	handler := cli.NewCLIHandler(service)
 
 	handler.CreateTask()

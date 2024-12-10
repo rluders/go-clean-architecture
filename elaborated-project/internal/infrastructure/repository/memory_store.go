@@ -3,7 +3,7 @@ package repository
 import (
 	"errors"
 	"sync"
-	"taskmanager/internal/domain"
+	"taskmanager-flat/internal/domain"
 )
 
 type MemoryStore struct {
