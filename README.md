@@ -3,7 +3,7 @@
 Welcome to the **Task Manager** repository! This project is a hands-on demonstration of 
 Clean Architecture principles applied to a simple yet versatile application—a 
 Task Management system. It's designed as a companion to the article 
-**"[Demystifying Clean Architecture in Go: Separating Fact from Fiction](http://github.com)"**.
+**"[Demystifying Clean Architecture in Go: Separating Fact from Fiction](https://medium.com/@rluders/demystifying-clean-architecture-in-go-separating-fact-from-fiction-26fc8e81b99b)"**.
 
 ## Purpose
 
